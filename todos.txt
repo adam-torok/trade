@@ -1,0 +1,32 @@
+Authentication
+    Registration 
+        - Firstname
+        - Secondname
+        - Email
+        - City
+        - County
+        - Password 2x
+    Login
+        - Email
+        - Password
+        - Recapcha
+
+Adverts 
+    Make
+        - Title
+        - Description
+        - Image
+        - Type of Console - XBOX/PS/NINTENDO
+        - Type of advert - SEEK/SELL
+        - Price - if have
+        - Post / man to man?
+        - State (Used/New)
+    Query 
+        - Price / DESC / ASC
+        - State 
+        - County
+        - City
+        
+
+
+
