@@ -28,6 +28,23 @@ Adverts
         - County
         - City
 
+Profile
+    Report bug
+    Helper
+    Edit
+        - City
+        - County
+        - Profile picture
+        - Bio 
+        - Phone number
+
+SUB PAGES 
+    - Advertising
+    - Impresszum
+    - About us 
+    - Sitemap
+    - Partners
+
 
 
 

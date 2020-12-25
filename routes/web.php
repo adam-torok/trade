@@ -2,20 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Landing page and footer links
+Route::get('/', [App\Http\Controllers\LandingController::class, 'index'])->name('home');
+Route::get('/impresszum', [App\Http\Controllers\LandingController::class, 'impressum'])->name('impressum');;
+Route::get('/about', [App\Http\Controllers\LandingController::class, 'about'])->name('about');;
+Route::get('/advertising', [App\Http\Controllers\LandingController::class, 'advertising'])->name('advertising');;
+Route::get('/sitemap', [App\Http\Controllers\LandingController::class, 'sitemap'])->name('sitemap');;
+Route::get('/partners', [App\Http\Controllers\LandingController::class, 'partners'])->name('partners');;
+Route::get('/faq', [App\Http\Controllers\LandingController::class, 'faq'])->name('faq');;
+Route::get('/help', [App\Http\Controllers\LandingController::class, 'help'])->name('help');;
 
 Auth::routes();
 
