@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'TRADE') }}</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -22,4 +23,11 @@
         <x-navs.footer/>
     </div>
 </body>
+<script>
+    $( document ).ready(function() {
+        $("#nav-toggle").click(function(){
+            $("#nav-content").toggleClass("hidden");
+        });
+    });
+</script>
 </html>
