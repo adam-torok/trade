@@ -1,7 +1,7 @@
-<nav class="flex border-b-4 border-black sticky items-center justify-between flex-wrap  bg-gray-500 p-6 fixed w-full z-10 top-0">
+<nav class="flex border-b-4 border-black sticky items-center justify-between flex-wrap  bg-gray-500 p-3 fixed w-full z-10 top-0">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
-			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-				<span class="text-2xl pl-2"><i class="em em-grinning"></i> Trade</span>
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="/">
+				<span data-tippy-content="Vissza a fooldalra!" class="text-2xl pl-2"><i class="fas fa-bomb fa-lg"></i></span>
 			</a>
 		</div>
 
@@ -31,9 +31,11 @@
 				</li>
                 @endif
                 @else 
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">
-                            {{ Auth::user()->last_name }}
+						<a data-tippy-content="Hirdetesek" href="{{route('profile')}}" id="navbarDropdown" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">
+                        Hirdetesek
+						</a>
+                        <a data-tippy-content="{{Auth::user()->first_name}} {{Auth::user()->last_name}}" href="{{route('profile')}}" id="navbarDropdown" class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4">
+							<img class="inline object-cover h-8 w-8 rounded-full" src="storage/{{ Auth::user()->profile_image }}">
                         </a>
                         <a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -43,7 +45,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </li>
                 @endguest
 			</ul>
 		</div>

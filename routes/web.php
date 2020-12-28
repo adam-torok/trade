@@ -12,6 +12,11 @@ Route::get('/partners', [App\Http\Controllers\LandingController::class, 'partner
 Route::get('/faq', [App\Http\Controllers\LandingController::class, 'faq'])->name('faq');;
 Route::get('/help', [App\Http\Controllers\LandingController::class, 'help'])->name('help');;
 
+//Profile page
+
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'updateProfilePicture'])->name('updateProfilePicture');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

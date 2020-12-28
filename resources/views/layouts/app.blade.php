@@ -6,9 +6,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'TRADE') }}</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/75ad4010ea.js" crossorigin="anonymous"></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -19,7 +23,7 @@
     <div id="app">
         <x-navs.topnav/>
         <x-beta-alert/>
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
         <x-navs.footer/>
