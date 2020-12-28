@@ -159,7 +159,7 @@
             </div>
         </div>
         <div class="mt-8">
-            <button type="submit" class=" mx-auto relative sm:mt-0 sm:h-auto  block w-full sm:w-auto border border-transparent px-6 py-3 text-base font-semibold leading-snug bg-blue-500 text-white rounded-md shadow-md bg-blue-400		 focus:outline-none focus:bg-blue-400		 transition ease-in-out duration-150 hover:bg-blue-400">
+            <button type="submit" class=" mx-auto relative sm:mt-0 sm:h-auto  block w-full sm:w-auto border border-transparent px-6 py-3 text-base font-semibold leading-snug bg-gray-500 text-white rounded-md shadow-md bg-gray-400		 focus:outline-none focus:bg-gray-400		 transition ease-in-out duration-150 hover:bg-gray-400">
                 Regisztráció befejezése
             </button>
         </div>

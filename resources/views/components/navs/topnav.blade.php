@@ -1,4 +1,4 @@
-<nav class="flex sticky items-center justify-between flex-wrap  bg-blue-500 p-6 fixed w-full z-10 top-0">
+<nav class="flex border-b-4 border-black sticky items-center justify-between flex-wrap  bg-gray-500 p-6 fixed w-full z-10 top-0">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
 				<span class="text-2xl pl-2"><i class="em em-grinning"></i> Trade</span>
@@ -15,7 +15,7 @@
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
 				@guest
                 <li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Főoldal</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="/">Főoldal</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Hirdetések</a>

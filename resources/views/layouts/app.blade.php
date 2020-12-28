@@ -12,11 +12,13 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <x-navs.topnav/>
+        <x-beta-alert/>
         <main class="py-4">
             @yield('content')
         </main>
