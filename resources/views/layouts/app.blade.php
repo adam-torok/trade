@@ -26,7 +26,9 @@
         <main>
             @yield('content')
         </main>
-        <x-navs.footer/>
+        @if(!Request::is('adverts','ps','xbox','nintendo'))
+            <x-navs.footer/>
+        @endif
     </div>
 </body>
 <script>

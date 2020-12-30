@@ -36,7 +36,7 @@ class ProfileController extends Controller
             $name = $user->first_name.'_'.$user->last_name.time();
             $folder = '/uploads/images/profile_images/';
             $filePath = $folder . $name. '.' . $avatar->getClientOriginalExtension();
-            $this->uploadProfilePicture($avatar, $folder, 'public', $name);
+            $this->uploadImage($avatar, $folder, 'public', $name);
             $user->profile_image = $filePath;
             $user->save();
             $request->session()->flash('msg', 'Sikeres profilkep frissites');
