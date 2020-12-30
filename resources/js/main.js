@@ -10,6 +10,12 @@ function readURL(input) {
     }
 }
 
+$( document ).ready(function() {
+    setTimeout(() => {
+        $('.loader').fadeOut('fast');
+    }, 2000);
+});
+
 $('#profile_image').change(function(){
     readURL(this);
     var fd = new FormData(document.getElementById("profile_image_upload_form"));
