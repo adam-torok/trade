@@ -80,48 +80,43 @@
             </div>
         </div>
         <div class="-mx-8 w-4/12 hidden lg:block">
-            <div class="px-8">
+            <div class="px-8 py-6">
+                <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
+                    <ul class="list-disc p-2">
+                        <li>
+                            <b>Az oldal jelenleg beta funkciokkal mukodik!</b>
+                        </li>
+                        <li>
+                            <b>Ne utalj előre! Soha!</b>
+                        </li>
+                        <li>
+                            <b>Probléma, csalás esetén minden hirdetésben ott a "Jelentem" gomb, használd!</b>
+                        </li>
+                        <li>
+                            <b>Konkrét hibát itt, általános észrevételeket itt jelezz!</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="px-8 mt-10">
                 <h1 class="mb-4 text-xl font-bold text-gray-700">Top traderek</h1>
                 <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
                     <ul class="-mx-4">
                         <li class="flex items-center"><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80" alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
                             <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Torok Adam</a><span class="text-gray-700 text-sm font-light">Created 23 Posts</span></p>
                         </li>
-                        <li class="flex items-center mt-6"><img src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=333&amp;q=80" alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
-                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Torok Adam</a><span class="text-gray-700 text-sm font-light">Created 52 Posts</span></p>
-                        </li>
-                        <li class="flex items-center mt-6"><img src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=281&amp;q=80" alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
-                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Torok Adam</a><span class="text-gray-700 text-sm font-light">Created 73 Posts</span></p>
-                        </li>
-                        <li class="flex items-center mt-6"><img src="https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=735&amp;q=80" alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
-                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Torok Adam</a><span class="text-gray-700 text-sm font-light">Created 245 Posts</span></p>
-                        </li>
-                        <li class="flex items-center mt-6"><img src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=373&amp;q=80" alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
-                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Torok Adam
-                                </a><span class="text-gray-700 text-sm font-light">Created 332 Posts</span>
-                            </p>
-                        </li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="mt-10 px-8">
-                <h1 class="mb-4 text-xl font-bold text-gray-700">Friss hirdetesek</h1>
-                <div class="flex flex-col bg-white px-8 py-6 max-w-sm mx-auto rounded-lg shadow-md">
-                    <div class="mt-4"><a href="#" class="text-lg text-gray-700 font-medium hover:underline">
-                            {{$adverts->first()->title}}</a></div>
-                    <div class="flex justify-between items-center mt-4">
-                        <div class="flex items-center"><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80" alt="avatar" class="w-8 h-8 object-cover rounded-full"><a href="#" class="text-gray-700 text-sm mx-3 hover:underline">Torok Adam</a></div><span class="font-light text-sm text-gray-600">Jun 1, 2020</span>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="m-5">
+<div class="mb-20 w-2/3 flex justify-center">
     {{$adverts->links()}}
 </div>
+
 <nav class="bottom-nav p-2 fixed bottom-0 w-full border bg-white flex overflow-x-auto">
     <a href="/xbox" class="p-2 flex cursor-pointer flex-col flex-grow items-center justify-center
         overflow-hidden whitespace-no-wrap text-sm transition-colors duration-100

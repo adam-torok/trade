@@ -37,7 +37,7 @@
 <script>
     $( document ).ready(function() {
         $("#nav-toggle").click(function(){
-            $("#nav-content").toggleClass("hidden");
+            $("#nav-content").slideToggle("hidden");
         });
     });
 </script>

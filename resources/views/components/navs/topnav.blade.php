@@ -10,7 +10,7 @@
 		</a>
 	</div>
 	<div class="block lg:hidden">
-		<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-700 hover:border-white">
+		<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-700 hover:border-gray">
 			<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 				<title>Menu</title>
 				<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
-		<ul class="list-reset lg:flex justify-end flex-1 items-center">
+		<ul class="list-reset flex-col md:flex-col lg:flex-row lg:flex justify-end flex-1 items-center">
 			@guest
 			<li class="mr-3">
 				<a class="inline-block py-2 px-4 text-gray-500 no-underline" href="/">Főoldal</a>

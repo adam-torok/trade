@@ -6,7 +6,7 @@
             {{$advert->title}}
         </h2>
         <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
-            <div class="mt-2 flex items-center text-sm text-gray-500">
+            <div class="mt-2 min-w-1/4 flex items-center text-sm text-gray-500">
                 <i class="
             @if($advert->console_type == 'Playstation') text-blue-400 @endif
             @if($advert->console_type == 'XBOX') text-green-400 @endif
@@ -16,7 +16,7 @@
             </div>
             <div class="mt-2 flex items-center text-sm text-gray-500">
                 <img src="{{asset('storage/')}}/{{ $advert->user->profile_image }}" alt="avatar" class="w-5 h-5 object-cover rounded-full">
-                <p>{{$advert->user->first_name}} {{$advert->user->last_name}}</p>
+                <a href="user/{{$advert->user->id}}">{{$advert->user->first_name}} {{$advert->user->last_name}}</a>
             </div>
             <div class="mt-2 flex items-center text-sm text-gray-500">
                 <i class="

@@ -15,25 +15,25 @@ class AdvertController extends Controller
 
     public function index()
     {
-        $adverts = Advert::paginate(10);
+        $adverts = Advert::orderBy('id', 'desc')->paginate(10);
         return view('layouts.adverts.index', compact('adverts'));
     }
 
     public function playstation()
     {
-        $adverts = Advert::where('console_type','Playstation')->simplePaginate(5);
+        $adverts = Advert::where('console_type','Playstation')->orderBy('id', 'desc')->paginate(10);
         return view('layouts.adverts.index', compact('adverts'));
     }
 
     public function xbox()
     {
-        $adverts = Advert::where('console_type','XBOX')->simplePaginate(5);
+        $adverts = Advert::where('console_type','XBOX')->orderBy('id', 'desc')->paginate(10);
         return view('layouts.adverts.index', compact('adverts'));
     }
 
     public function nintendo()
     {
-        $adverts = Advert::where('console_type','Nintendo')->simplePaginate(5);
+        $adverts = Advert::where('console_type','Nintendo')->orderBy('id', 'desc')->paginate(10);
         return view('layouts.adverts.index', compact('adverts'));
     }
 

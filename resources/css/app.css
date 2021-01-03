@@ -22,7 +22,6 @@
 .loader{
     display: flex;
     z-index: 999;
-    font-size: 5rem;
     justify-content: center;
     align-content: center;
     overflow: show;
