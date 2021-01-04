@@ -34,4 +34,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Advert::class ,'user_id');
     }
+
+    public function messages(){
+        return $this->hasMany(Message::class, 'to');
+    }
+
+    public function getUnread(){
+        $count = $this->messages()->where('read',0)->get();
+        return $count->count();
+    }
 }

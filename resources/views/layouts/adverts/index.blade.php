@@ -82,7 +82,7 @@
         <div class="-mx-8 w-4/12 hidden lg:block">
             <div class="px-8 py-6">
                 <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
-                    <ul class="list-disc p-2">
+                    <ul class="list-disc p-2 text-gray-600">
                         <li>
                             <b>Az oldal jelenleg beta funkciokkal mukodik!</b>
                         </li>

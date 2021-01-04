@@ -31,3 +31,9 @@ Route::get('/adverts/{advert}', [App\Http\Controllers\AdvertController::class, '
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/chats', [App\Http\Controllers\ContactsController::class, 'index'])->name('chats');;
+Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'get']);
+Route::get('/conversations/{id}', [App\Http\Controllers\ContactsController::class, 'getMessagesFor']);
+Route::post('/conversations/send', [App\Http\Controllers\ContactsController::class, 'send']);
+

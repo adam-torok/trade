@@ -12,4 +12,5 @@ class UserController extends Controller
         $user = $user;
         return view('layouts.profile.show',compact('user'));
     }
+
 }
