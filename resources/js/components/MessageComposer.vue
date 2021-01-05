@@ -1,6 +1,6 @@
 <template>
     <div class="composer">
-        <div class="border-t-2 bg-white border-gray-200 px-4 p-4 mb-2 sm:mb-0">
+        <div class="border-t bg-white border-gray-200 px-4 p-4 mb-2 sm:mb-0">
             <div class="relative flex">
                 <span class="absolute inset-y-0 flex items-center">
                     <button
@@ -26,7 +26,7 @@
                 <input
                     v-model="message"
                     @keydown.enter="send"
-                    placeholder="message"
+                    placeholder="Kuldj uzenetet"
                     type="text"
                     class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-full py-3"
                 />

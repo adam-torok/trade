@@ -1,21 +1,18 @@
 <template>
-    <div class="sm:hidden md:block contacts-list ">
+    <div class="contacts-list border-l border-gray-200">
         <ul>
             <li
                 v-for="(contact) in sortedContacts"
                 :key="contact.id"
                 @click="selectContact(contact)"
-                :class="{ selected: contact == selected }"
             >
                 <div class="avatar">
                     <img
+                        class="h-10 w-10 object-cover rounded-full"
+                        :class=" { selected: contact == selected  }"
                         :src="'storage/' + contact.profile_image"
                         :alt="contact.first_name"
                     />
-                </div>
-                <div class="contact">
-                    <p class="name">{{ contact.first_name }}</p>
-                    <p class="email">{{ contact.email }}</p>
                 </div>
                 <span class="unread" v-if="contact.unread">{{contact.unread}}</span>
                 <span class="unread" v-if="contact.unread">{{
@@ -27,30 +24,25 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            selected: this.contacts.length ? this.contacts[0] : null
-        };
-    },
-    props: {
-        contacts: {
-            type: Array,
-            default() {
-                return [];
+   export default {
+        props: {
+            contacts: {
+                type: Array,
+                default: []
             }
-        }
-    },
-    methods: {
-        selectContact(contact) {
-            this.selected = contact;
-            this.$emit("selected", contact);
-        }
-    },
-    mounted() {
-        console.log(this.contacts);
-    },
-      computed: {
+        },
+        data() {
+            return {
+                selected: this.contacts.length ? this.contacts[0] : null
+            };
+        },
+        methods: {
+            selectContact(contact) {
+                this.selected = contact;
+                this.$emit('selected', contact);
+            }
+        },
+        computed: {
             sortedContacts() {
                 return _.sortBy(this.contacts, [(contact) => {
                     if (contact == this.selected) {
@@ -63,25 +55,20 @@ export default {
     }
 </script>
 <style lang="scss" scoped>
+.selected {
+    border: 3px solid #ffffff19;
+}
 .contacts-list {
-    flex: 2;
+    flex: 1;
     max-height: 600px;
     overflow: scroll;
-    border-left: 0.5px solid #a6a6a6;
-
     ul {
         list-style-type: none;
         padding-left: 0;
         li {
-            display: flex;
             padding: 2px;
-            border-bottom: 1px solid #aaaaaa;
-            height: 80px;
             position: relative;
             cursor: pointer;
-            &.selected {
-                background: #dfdfdf;
-            }
             span.unread {
                 background: #82e0a8;
                 color: #fff;
@@ -102,11 +89,7 @@ export default {
                 flex: 1;
                 display: flex;
                 align-items: center;
-                img {
-                    width: 35px;
-                    border-radius: 50%;
-                    margin: 0 auto;
-                }
+                justify-content: center;
             }
             .contact {
                 flex: 3;

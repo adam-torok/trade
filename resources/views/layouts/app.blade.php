@@ -26,11 +26,10 @@
     @endif
     <div id="app">
         <x-navs.topnav/>
-        <x-beta-alert/>
         <main>
             @yield('content')
         </main>
-        @if(!Request::is('adverts','ps','xbox','nintendo'))
+        @if(!Request::is('adverts','ps','xbox','nintendo','chats'))
             <x-navs.footer/>
         @endif
     </div>

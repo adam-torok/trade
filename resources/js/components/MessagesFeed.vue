@@ -4,10 +4,10 @@
         <div v-for="message in messages" :key="message.id">
             <div :class="`flex p-1 items-end ${message.to == contact.id ? '' : 'justify-end'}`">
                 <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-end">
-                    <span :class="`message block px-4 py-2 rounded-lg font-lg rounded-bl-none
+                    <span :class="`message block px-4 py-2 rounded-lg font-lg
                             ${ message.to == contact.id
-                                ? '  bg-gray-300 text-gray-600'
-                                : '  bg-yellow-600 text-white'
+                                ? '  bg-gray-300 text-gray-600  rounded-bl-none' 
+                                : '  bg-yellow-600 text-white rounded-br-none'
                             }`
                         ">
                         {{ message.text }}
