@@ -13,16 +13,17 @@ class AdvertFactory extends Factory
 
     public function definition()
     {
+        
         return [
             'user_id' => 1,
-            'title' =>  $this->faker->name,
-            'description' =>  $this->faker->name,
+            'title' =>  $this->faker->sentence(5),
+            'description' =>  $this->faker->text,
             'image' => '/uploads/images/advert_images/Bontatlan Xbox One X - 1TB - Limitált Cyberpunk 2077 kiadás_1609242067.jpg',
-            'console_type' => 'Nintendo',
-            'advert_type' => 'Elad',
-            'price' => 234,
-            'package' => 'Nem',
-            'condition' => 'Hasznalt',
+            'console_type' => $this->faker->randomElement(['Nintendo','Playstation','XBOX']),
+            'advert_type' => $this->faker->randomElement(['Elad','Cserel','Keres']),
+            'price' => $this->faker->numberBetween(1000,9000),
+            'package' => $this->faker->randomElement(['Igen','Nem']),
+            'condition' => $this->faker->randomElement(['Uj','Hasznalt']),
         ];
     }
 }

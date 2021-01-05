@@ -62,7 +62,6 @@
             <div class="grid grid-cols-1">
                 
                     <div class="flex  rounded bg-gray-300 items-center p-2 ">
-                       
                         <input type="text" placeholder="Kulcsszora kereses..." class="
                             bg-gray-300  max-w-full focus:outline-none text-gray-700" />
                     </div>             
