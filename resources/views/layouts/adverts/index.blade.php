@@ -9,7 +9,7 @@
 
 <div class="sm:px-2 lg:px-6 m-5">
     <form method="get" class="filtering mx-auto flex justify-center items-center  p-2 md:p-0">
-        <div class=" p-6 grid grid-cols-1 gap-6 bg-white rounded-lg">
+        <div class=" p-6 grid grid-cols-1 gap-6 bg-white rounded-lg shadow-md">
             <div class="flex flex-col md:flex-row">
                 <div>
                     <select name="condition" class="border p-2 rounded">
@@ -114,7 +114,7 @@
     </div>
 </div>
 
-<div class="mb-20 w-2/3 flex justify-center">
+<div class="pb-20 w-2/3 flex justify-center">
     {{$adverts->withQueryString()->links()}}
 </div>
 

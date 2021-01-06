@@ -12,7 +12,7 @@
                     @if($advert->console_type == 'XBOX') text-green-400 @endif
                     @if($advert->console_type == 'Nintendo') text-red-400 @endif
                     fas fa-city mr-1 "></i>
-                {{$advert->city}}
+                    {{$advert->county}} megye -  {{$advert->city}}
             </div>
             <div class="mt-2 min-w-1/4 flex items-center text-sm text-gray-500">
                 <i class="
