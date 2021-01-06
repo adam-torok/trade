@@ -18,6 +18,7 @@ class User extends Authenticatable
         'city',
         'zip',
         'email',
+        'confirmed',
         'password',
     ];
 

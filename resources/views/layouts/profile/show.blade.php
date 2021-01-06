@@ -5,7 +5,7 @@
 <div class="container py-5 mx-auto items-center">
     <div class="mb-5 text-center">
         <div class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
-            <img id="profile_iamge_preview" class="object-cover w-full h-32 rounded-full" src="{{asset('storage/')}}{{$user->profile_image}}" />
+            <img id="profile_iamge_preview" class="object-cover w-full h-32 rounded-full" src="{{asset('storage')}}/uploads/images/profile_images/{{$user->profile_image}}" />
         </div>
     </div>
     <div class="bg-white shadow overflow-hidden sm:rounded-lg">

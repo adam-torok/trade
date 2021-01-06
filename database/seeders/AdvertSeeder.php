@@ -9,6 +9,6 @@ class AdvertSeeder extends Seeder
 {
   public function run()
     {
-        \App\Models\Advert::factory(15)->create();
+        \App\Models\Advert::factory(30)->create();
     }
 }

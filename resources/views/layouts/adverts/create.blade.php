@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
-    <form enctype="multipart/form-data" method="POST" action="{{ route('createAdvert') }}">
+    <form enctype="multipart/form-data" method="POST" action="{{ route('advert.create') }}">
         @csrf
         <div class="-mx-3 md:flex mb-6">
             <div class="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -147,7 +147,7 @@
             </div>
         </div>
         <div class="mt-8">
-            <button type="submit" class=" mx-auto relative sm:mt-0 sm:h-auto  block w-full sm:w-auto border border-transparent px-6 py-3 text-base font-semibold leading-snug bg-gray-500 text-white rounded-md shadow-md bg-gray-400		 focus:outline-none focus:bg-gray-400		 transition ease-in-out duration-150 hover:bg-gray-400">
+            <button type="submit" class="hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 mx-auto relative sm:mt-0 sm:h-auto  block w-full sm:w-auto border border-transparent px-6 py-3 text-base font-semibold leading-snug bg-gray-500 text-white rounded-md shadow-md bg-gray-400  hover:bg-gray-400">
                 Hirdetes feladasa
             </button>
         </div>

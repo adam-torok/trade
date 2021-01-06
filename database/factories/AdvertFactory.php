@@ -23,6 +23,9 @@ class AdvertFactory extends Factory
             'advert_type' => $this->faker->randomElement(['Elad','Cserel','Keres']),
             'price' => $this->faker->numberBetween(1000,9000),
             'package' => $this->faker->randomElement(['Igen','Nem']),
+            'county' => $this->faker->randomElement(['Baranya','Békés','Fejér','Heves','Nógrád','Pest','Veszprém','Zala','Győr-Moson-Sopron','Hajdú-Bihar']),
+            'city' => $this->faker->randomElement(['Szeged','Szentes','Pecs','Mako','Bekes','Gyor']),
+            'shelfed' => $this->faker->randomElement([0,1]),
             'condition' => $this->faker->randomElement(['Uj','Hasznalt']),
         ];
     }

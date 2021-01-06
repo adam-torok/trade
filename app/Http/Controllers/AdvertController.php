@@ -16,10 +16,7 @@ class AdvertController extends Controller
     {
         //dd($request->input());
         //Debugging the filtering
-        $adverts = Advert::filter($request->input())->paginate(5);
-        
-        //dd($adverts);
-        
+        $adverts = Advert::filter($request->input())->paginate(10);
         return view('layouts.adverts.index', compact('adverts'));
     }
 

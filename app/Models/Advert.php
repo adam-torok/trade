@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DateTime;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,6 +17,9 @@ class Advert extends Model
         'description',
         'image',
         'console_type',
+        'county',
+        'city',
+        'shelfed',
         'advert_type',
         'price',
         'package',
@@ -30,6 +34,5 @@ class Advert extends Model
     public function modelFilter()
     {
         return $this->provideFilter(\App\ModelFilters\AdvertFilter::class);
-}
-
+    }
 }

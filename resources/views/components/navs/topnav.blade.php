@@ -50,7 +50,7 @@
 				
 			</a>
 			<a data-tippy-content="{{Auth::user()->first_name}} {{Auth::user()->last_name}}" href="{{route('profile')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
-				<img class="inline object-cover h-8 w-8 rounded-full" src="{{asset('storage/')}}/{{ Auth::user()->profile_image }}">
+				<img class="inline object-cover h-8 w-8 rounded-full" src="{{asset('storage')}}/uploads/images/profile_images/{{ Auth::user()->profile_image }}">
 			</a>
 			<a data-tippy-content="Kijelentkezés" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4" href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">

@@ -5,6 +5,7 @@
 @if (session('msg'))
 <x-alerts.base />
 @endif
+<x-alert />
 
 <div class="sm:px-2 lg:px-6 m-5">
     <form method="get" class="filtering mx-auto flex justify-center items-center  p-2 md:p-0">
@@ -12,12 +13,14 @@
             <div class="flex flex-col md:flex-row">
                 <div>
                     <select name="condition" class="border p-2 rounded">
+                        <option selected value="">Kondicio</option>
                         <option>Hasznalt</option>
                         <option>Uj</option>
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
                     <select name="county" class="border p-2 rounded">
+                        <option selected value="">Megye</option>
                         <option>Bács-Kiskun</option>
                         <option>Baranya</option>
                         <option>Békés</option>
@@ -40,21 +43,15 @@
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
-                    <select name="console_type" class="border p-2 rounded">
-                        <option>Playstation</option>
-                        <option>Xbox</option>
-                        <option>Nintendo</option>
-                    </select>
-                </div>
-                <div class="pt-6 md:pt-0 md:pl-6">
                     <select name="advert_type" class="border p-2 rounded">
+                        <option selected value="">Szandek</option>
                         <option>Elad</option>
                         <option>Keres</option>
-                        <option>Csere</option>
+                        <option>Cserel</option>
                     </select>
                 </div>
-                <div class="pt-6 md:pt-0 md:pl-6">
-                    <label>Csomagkuldessel?</label>
+                <div class="flex items-center pt-6 md:pt-0 md:pl-6">
+                    <label class="mr-1">Csomagkuldessel?</label>
                     <input type="checkbox" name="package">
                 </div>
             </div>
@@ -65,17 +62,17 @@
             </div>
             <div class="flex justify-center">
                 <button type="submit" class="
-                @if(Request::is('ps')) bg-blue-400 @endif
-                @if(Request::is('xbox')) bg-green-400 @endif
-                @if(Request::is('nintendo')) bg-red-400 @endif
-                p-2 border w-1/4 rounded-md bg-gray-800 text-white">Kereses!</button>
+                    @if(Request::is('ps')) bg-blue-400 hover:bg-blue-700 focus:ring-blue-600 @endif
+                    @if(Request::is('xbox')) bg-green-400 hover:bg-green-700 focus:ring-green-600 @endif
+                    @if(Request::is('nintendo')) bg-red-400 hover:bg-red-700 focus:ring-red-600 @endif     
+                    focus:outline-none focus:ring-2  focus:ring-opacity-50 p-2 border w-1/4 rounded-md bg-gray-800 text-white"><i class="fas fa-search mr-1"></i>Kereses</button>
             </div>
         </div>
     </form>
     <div class="flex justify-between container mx-auto">
-        <div class="w-full sm:px-2 sm:w-full lg:w-8/12">
+        <div class="w-full sm:px-2 sm:w-full lg:w-9/12">
             <div class="mt-6">
-                <div class="max-w-4xl grid md:grid-cols-1 px-2 lg:px-10 py-6 bg-white rounded-lg shadow-md">
+                <div class="max-w-full grid md:grid-cols-1 px-2 lg:px-10 py-6 bg-white rounded-lg shadow-md">
                     @foreach($adverts as $advert)
                     <x-advert :advert="$advert" />
                     @endforeach
@@ -83,7 +80,7 @@
             </div>
         </div>
         
-        <div class="-mx-8 w-4/12 hidden lg:block">
+        <div class="-mx-8 w-3/12 hidden lg:block">
             <div class="px-8 py-6">
                 <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
                     <ul class="list-disc p-2 text-gray-600">
@@ -118,7 +115,7 @@
 </div>
 
 <div class="mb-20 w-2/3 flex justify-center">
-    {{$adverts->links()}}
+    {{$adverts->withQueryString()->links()}}
 </div>
 
 <x-navs.consoles/>

@@ -9,7 +9,7 @@
 <div class="container py-5 mx-auto items-center">
     <div class="mb-5 text-center">
         <div class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
-            <img id="profile_iamge_preview" class="object-cover w-full h-32 rounded-full" src="storage/{{$user->profile_image}}" />
+            <img id="profile_iamge_preview" class="object-cover w-full h-32 rounded-full" src="storage/uploads/images/profile_images/{{$user->profile_image}}" />
         </div>
         <div class="mx-auto w-48 text-gray-500 text-xs text-center mb-2 mt-1">Kattints, hogy feltolts profilkepet</div>
         <form id='profile_image_upload_form' enctype="multipart/form-data" method="POST">
