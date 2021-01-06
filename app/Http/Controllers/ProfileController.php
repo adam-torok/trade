@@ -42,4 +42,10 @@ class ProfileController extends Controller
             $request->session()->flash('msg', 'Sikeres profilkep frissites');
         }
     }
+
+    public function destroy(Request $request){
+        User::where('id',$request->id)->delete();
+        $request->session()->flash('msg', 'Profilod 3 napon belul torlesre kerul.');
+        Auth::logout();
+    }
 }

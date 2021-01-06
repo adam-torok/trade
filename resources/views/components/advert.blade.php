@@ -38,5 +38,24 @@
                 Megnezem!
             </a>
         </span>
+
+        @if($advert->user->id == Auth::user()->id)
+        <span class="ml-3 sm:ml-3">
+            <a href="adverts/edit/{{ $advert->id}}" type="button" 
+            class="inline-flex items-center bg-gray-600 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white">
+                Szerkesztes!
+            </a>
+        </span>
+        @endif
+        @if($advert->user->id == Auth::user()->id)
+        <span class="ml-3 sm:ml-3">
+            <form action="{{ route('advert.destroy', $advert->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="inline-flex items-center bg-gray-600 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white" type="submit">Torles</button>
+            </form>
+        </span>
+        @endif
+
     </div>
 </div>

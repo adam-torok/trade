@@ -25,7 +25,7 @@
 				<a class="inline-block py-2 px-4 text-gray-500 no-underline" href="/">Főoldal</a>
 			</li>
 			<li class="mr-3">
-				<a class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4" href="{{route('adverts')}}">Hirdetések</a>
+				<a class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4" href="{{route('adverts.index')}}">Hirdetések</a>
 			</li>
 			@if (Route::has('login'))
 			<li class="mr-3">
@@ -38,10 +38,10 @@
 			</li>
 			@endif
 			@else
-			<a data-tippy-content="Hirdetesek" href="{{route('adverts')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Hirdetesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-gavel"></i>
 			</a>
-			<a data-tippy-content="Ertesitesek" href="{{route('adverts')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Ertesitesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-bell"></i>
 			</a>
 			<a data-tippy-content="Üzenetek" href="{{route('chats')}}" id="navbarDropdown" class="inline-block align-center justify-center text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">

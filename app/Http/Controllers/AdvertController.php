@@ -67,7 +67,6 @@ class AdvertController extends Controller
             'title' => 'cim',
             'description' => 'leiras',
             'advert_image' => 'hirdetes kepe'
-
         ]);
         if ($request->hasFile('advert_image')) {
             $advert_image = $request->file('advert_image');
@@ -89,5 +88,30 @@ class AdvertController extends Controller
             $request->session()->flash('msg', 'Sikeres hirdetes letrehozas');
             return redirect('/adverts');
         }
+    }
+
+    public function edit(Advert $advert){
+        $advert = $advert;
+        return view('layouts.adverts.edit',compact('advert'));
+    }
+
+    public function update(Request $request){
+        $advert = Advert::findOrFail($request->id);
+        $advert->title = $request->title;
+        $advert->description = $request->description;
+        $advert->console_type = $request->console_type;
+        $advert->advert_type = $request->advert_type;
+        $advert->price = $request->price;
+        $advert->package = $request->package;
+        $advert->condition = $request->condition;
+        $advert->save();
+        $request->session()->flash('msg', 'Sikeres hirdetes frissites');
+        return redirect('/profile');
+    }
+
+    public function destroy(Request $request){
+        Advert::where('id',$request->id)->delete();
+        $request->session()->flash('msg', 'Sikeres hirdetes torles');
+        return redirect('/profile');
     }
 }
