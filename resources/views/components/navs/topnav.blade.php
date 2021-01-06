@@ -41,6 +41,9 @@
 			<a data-tippy-content="Hirdetesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-gavel"></i>
 			</a>
+			<a data-tippy-content="Dobozom" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+				<i class="fas fa-lg fa-box"></i>
+			</a>
 			<a data-tippy-content="Ertesitesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-bell"></i>
 			</a>
