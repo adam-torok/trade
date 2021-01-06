@@ -3,19 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Advert;
-use App\Models\User;
 use App\Traits\UploadTrait;
+use EloquentFilter\Filterable;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class AdvertController extends Controller
 {
 
-    use UploadTrait;
+    use UploadTrait, Filterable;
 
-    public function index()
+    public function index(Request $request)
     {
-        $adverts = Advert::orderBy('id', 'desc')->paginate(10);
+        //dd($request->input());
+        //Debugging the filtering
+        $adverts = Advert::filter($request->input())->paginate(5);
+        
+        //dd($adverts);
+        
         return view('layouts.adverts.index', compact('adverts'));
     }
 

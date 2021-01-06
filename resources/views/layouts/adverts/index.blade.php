@@ -7,18 +7,17 @@
 @endif
 
 <div class="sm:px-2 lg:px-6 m-5">
-    <form class="filtering mx-auto flex justify-center items-center  p-2 md:p-0">
-        @csrf
+    <form method="get" class="filtering mx-auto flex justify-center items-center  p-2 md:p-0">
         <div class=" p-6 grid grid-cols-1 gap-6 bg-white rounded-lg">
             <div class="flex flex-col md:flex-row">
                 <div>
-                    <select class="border p-2 rounded">
-                        <option name='allapot' value="Hasznalt">Hasznalt</option>
-                        <option name='allapot' value="Uj">Uj</option>
+                    <select name="condition" class="border p-2 rounded">
+                        <option>Hasznalt</option>
+                        <option>Uj</option>
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
-                    <select class="border p-2 rounded">
+                    <select name="county" class="border p-2 rounded">
                         <option>Bács-Kiskun</option>
                         <option>Baranya</option>
                         <option>Békés</option>
@@ -41,29 +40,27 @@
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
-                    <select class="border p-2 rounded">
+                    <select name="console_type" class="border p-2 rounded">
                         <option>Playstation</option>
                         <option>Xbox</option>
                         <option>Nintendo</option>
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
-                    <select class="border p-2 rounded">
-                        <option name='szandek' value="Elad">Elad</option>
-                        <option name='szandek' value="Keres">Keres</option>
-                        <option name='szandek' value="Csere">Csere</option>
+                    <select name="advert_type" class="border p-2 rounded">
+                        <option>Elad</option>
+                        <option>Keres</option>
+                        <option>Csere</option>
                     </select>
                 </div>
                 <div class="pt-6 md:pt-0 md:pl-6">
-                    <label >Csomagkuldessel?</label>
+                    <label>Csomagkuldessel?</label>
                     <input type="checkbox" name="package">
                 </div>
             </div>
             <div class="grid grid-cols-1">
-                
                     <div class="flex  rounded bg-gray-300 items-center p-2 ">
-                        <input type="text" placeholder="Kulcsszora kereses..." class="
-                            bg-gray-300  max-w-full focus:outline-none text-gray-700" />
+                        <input type="text" name="title" placeholder="Kulcsszora kereses..." class="bg-gray-300  max-w-full focus:outline-none text-gray-700" />
                     </div>             
             </div>
             <div class="flex justify-center">
@@ -85,6 +82,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="-mx-8 w-4/12 hidden lg:block">
             <div class="px-8 py-6">
                 <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">

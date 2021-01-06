@@ -42,8 +42,6 @@ class ContactsController extends Controller
 
     public function getMessagesFor($id)
     {
-        // Mark all messages with the selected content as read
-
         Message::where('from', $id)->where('to', auth()->id())->update(['read' => true]);
 
         $messages = Message::where(function ($q) use ($id) {

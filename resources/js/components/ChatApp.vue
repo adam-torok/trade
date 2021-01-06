@@ -30,19 +30,20 @@ export default {
             contacts: []
         };
     },
-    beforeMount(){
+    beforeMount() {
         axios.get("/contacts").then(response => {
             this.contacts = response.data;
             this.selectedContact = response.data[0];
-            axios.get(`/conversations/${this.selectedContact.id}`).then(response => {
-                this.messages = response.data;
-                console.log(this.messages);
+            axios
+                .get(`/conversations/${this.selectedContact.id}`)
+                .then(response => {
+                    this.messages = response.data;
+                    console.log(this.messages);
+                });
         });
-        });
-        
     },
     mounted() {
-        Echo.private(`messages${this.user.id}`).listen('NewMessage', e => {
+        Echo.private(`messages${this.user.id}`).listen("NewMessage", e => {
             console.log(helo);
             this.handleIncoming(e.message);
         });
@@ -66,7 +67,7 @@ export default {
                 this.saveNewMessage(message);
                 return;
             }
-        this.updateUnreadCount(message.from_contact, false);
+            this.updateUnreadCount(message.from_contact, false);
         },
         updateUnreadCount(contact, reset) {
             this.contacts = this.contacts.map(single => {
