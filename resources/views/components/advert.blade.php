@@ -49,19 +49,33 @@
                     <i class="far fa-eye"></i>
             </a>
         </span>
-        @if($advert->user->id != Auth::user()->id)
-        <span class="ml-2 sm:ml-3">
-            <a  href="adverts/{{ $advert->id }}" 
-                data-tippy-content="Bobozolom!" 
-                type="button" 
-                class="focus:outline-none focus:ring-2  focus:ring-opacity-50
-                    inline-flex items-center px-4 py-2 border border-transparent
-                    bg-gray-500 hover:bg-gray-700 rounded-md shadow-sm text-sm font-medium text-white">
-                <i class="fas fa-box-open"></i>
-            </a>
-        </span>
-        @endif
     @auth
+        @if($advert->user->id != Auth::user()->id)
+            @if(!Request::is('box'))
+                <span class="ml-2 sm:ml-3">
+                    <a href="{{route('box.store',$advert->id)}}" 
+                        data-tippy-content="Bobozolom!" 
+                        type="button" 
+                        class="focus:outline-none focus:ring-2  focus:ring-opacity-50
+                            inline-flex items-center px-4 py-2 border border-transparent
+                            bg-gray-500 hover:bg-gray-700 rounded-md shadow-sm text-sm font-medium text-white">
+                        <i class="fas fa-box-open"></i>
+                    </a>
+                </span>
+            @endif
+            @if(Request::is('box'))
+            <span class="ml-2 sm:ml-3">
+                    <a href="{{route('box.remove',$advert->id)}}" 
+                        data-tippy-content="Eltavolitom!" 
+                        type="button" 
+                        class="focus:outline-none focus:ring-2  focus:ring-opacity-50
+                            inline-flex items-center px-4 py-2 border border-transparent
+                            bg-gray-500 hover:bg-gray-700 rounded-md shadow-sm text-sm font-medium text-white">
+                        <i class="fas fa-recycle"></i>
+                    </a>
+            </span>
+            @endif
+        @endif
         @if($advert->user->id == Auth::user()->id)
         <span class="ml-3 sm:ml-3">
             <a href="adverts/edit/{{ $advert->id}}" type="button" 

@@ -17,6 +17,11 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])
 Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'updateProfilePicture'])->name('updateProfilePicture');
 Route::delete('/profile', [App\Http\Controllers\ProfileController::class, 'destroy'])->name('profile.destroy');
 
+//Box page
+Route::get('/box', [App\Http\Controllers\BoxController::class, 'index'])->name('box');
+Route::get('/box/add/{id}', [App\Http\Controllers\BoxController::class, 'add'])->name('box.store');
+Route::get('/box/remove/{id}', [App\Http\Controllers\BoxController::class, 'remove'])->name('box.remove');
+
 //Showing user page
 Route::get('/user/{user}', [App\Http\Controllers\UserController::class, 'show'])->name('user');
 //Advertising
@@ -40,4 +45,3 @@ Route::get('/chats', [App\Http\Controllers\ContactsController::class, 'index'])-
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'get']);
 Route::get('/conversations/{id}', [App\Http\Controllers\ContactsController::class, 'getMessagesFor']);
 Route::post('/conversations/send', [App\Http\Controllers\ContactsController::class, 'send']);
-
