@@ -1,11 +1,10 @@
 <div class="lg:flex  border-b py-4 lg:items-center lg:justify-between">
-    <img class="h-16 rounded-lg w-16 mr-5 object-cover" src="{{asset('storage/')}}/{{$advert->image}}">
-    <div class="            
-            flex-1 min-w-0">
-        <a href="adverts/{{ $advert->id }}" class="text-l font-bold  text-gray-900 sm:truncate">
+    <img class="w-full h-1/2 lg:h-20 lg:w-20 rounded-lg  mr-5 object-cover" src="{{asset('storage/')}}/{{$advert->image}}">
+    <div class="flex-1 min-w-0 mt-4 lg:m-0">
+        <a href="adverts/{{ $advert->id }}" class=" text-l font-bold  text-gray-900 sm:truncate">
             {{$advert->title}}
         </a>
-        <div class="mt-1 grid grid-cols-4 flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
+        <div class="mt-1 grid grid-cols-2 lg:grid-cols-4 flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
             <div class="mt-2 min-w-1/4 flex items-center text-sm text-gray-500">
                 <i class="
                     @if($advert->console_type == 'Playstation') text-blue-400 @endif
@@ -36,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-5 flex items-center justify-center	 lg:mt-0 lg:ml-4">
+    <div class="mt-5 flex justify-end items-center lg:justify-center	lg:mt-0 lg:ml-4">
         <span class="sm:ml-3">
             <a  data-tippy-content="Megnezem!" 
                 href="adverts/{{ $advert->id }}"
@@ -46,7 +45,10 @@
                     @if($advert->console_type == 'Nintendo') bg-red-400 hover:bg-red-700 focus:ring-red-600 @endif
                     focus:outline-none focus:ring-2  focus:ring-opacity-50
                     inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white">
-                    <i class="far fa-eye"></i>
+                    <i class="
+                    @if($advert->console_type == 'Playstation') fab fa-playstation  @endif
+                    @if($advert->console_type == 'XBOX') fab fa-xbox @endif
+                    @if($advert->console_type == 'Nintendo')fas fa-gamepad @endif"></i>
             </a>
         </span>
     @auth

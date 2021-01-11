@@ -17,6 +17,12 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
+    public function show(User $user)
+    {   
+        $user = $user;
+        return view('layouts.profile.show',compact('user'));
+    }
+
     public function index(){
         $user = Auth::user();
         return view("layouts.profile.index",compact('user'));

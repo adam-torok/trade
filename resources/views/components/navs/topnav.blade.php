@@ -38,19 +38,25 @@
 			</li>
 			@endif
 			@else
-			<a data-tippy-content="Hirdetesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Hirdetesek" href="{{route('adverts.index')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-gavel"></i>
 			</a>
-			<a data-tippy-content="Dobozom" href="{{route('box')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Celzott hirdetesek" href="{{route('box')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+				<i class="fas fa-lg fa-bullseye"></i>
+			</a>
+			<a data-tippy-content="Ajandek" href="{{route('box')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+				<i class="fas fa-lg fa-gift"></i>
+			</a>
+			<a data-tippy-content="Dobozom" href="{{route('box')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-box"></i>
 			</a>
-			<a data-tippy-content="Ertesitesek" href="{{route('adverts.index')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Ertesitesek" href="{{route('adverts.index')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-bell"></i>
 			</a>
-			<a data-tippy-content="Üzenetek" href="{{route('chats')}}" id="navbarDropdown" class="inline-block align-center justify-center text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="Üzenetek" href="{{route('chats')}}" class="inline-block align-center justify-center text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<i class="fas fa-lg fa-envelope @if(Auth::user()->getUnread() > 0) animate-pulse @endif"></i>
 			</a>
-			<a data-tippy-content="{{Auth::user()->first_name}} {{Auth::user()->last_name}}" href="{{route('profile')}}" id="navbarDropdown" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
+			<a data-tippy-content="{{Auth::user()->first_name}} {{Auth::user()->last_name}}" href="{{route('profile')}}" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4">
 				<img class="inline object-cover h-8 w-8 rounded-full" src="{{asset('storage')}}/uploads/images/profile_images/{{ Auth::user()->profile_image }}">
 			</a>
 			<a data-tippy-content="Kijelentkezés" class="inline-block text-gray-500 no-underline hover:text-gray-700 hover:text-underline py-2 px-4" href="{{ route('logout') }}" onclick="event.preventDefault();
