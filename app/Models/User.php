@@ -36,6 +36,11 @@ class User extends Authenticatable
         return $this->hasMany(Advert::class ,'user_id') ->orderBy('updated_at','desc');
     }
 
+    public function boxes()
+    {
+        return $this->hasMany(Box::class,'user_id');
+    }
+
     public function messages(){
         return $this->hasMany(Message::class, 'to');
     }
