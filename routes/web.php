@@ -23,7 +23,7 @@ Route::get('/box/add/{id}', [App\Http\Controllers\BoxController::class, 'add'])-
 Route::get('/box/remove/{id}', [App\Http\Controllers\BoxController::class, 'remove'])->name('box.remove');
 
 //Showing user page
-Route::get('/user/{user}', [App\Http\Controllers\UserController::class, 'show'])->name('user');
+Route::get('/user/{user}', [App\Http\Controllers\ProfileController::class, 'show'])->name('user');
 //Advertising
 Route::get('/ps', [App\Http\Controllers\AdvertController::class, 'playstation'])->name('adverts.ps');
 Route::get('/xbox', [App\Http\Controllers\AdvertController::class, 'xbox'])->name('adverts.xbox');
